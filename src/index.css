@@ -3,7 +3,7 @@
   --white: hsl(0, 0%, 100%);
   --light-grey: hsl(217, 12%, 63%);
   --medium-grey: hsl(216, 12%, 54%);
-  --dark-blue: hsl(213, 19%, 18%);
+  --dark-blue: hsl(213, 20%, 18%);
   --very-dark-blue: hsl(216, 12%, 8%);
 }
 
@@ -32,4 +32,121 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2.4rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  padding: 3.2rem;
+  background-color: var(--dark-blue);
+  border-radius: 15px;
+  width: 50rem;
+}
+
+.card--submitted {
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3b424b;
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 50%;
+}
+
+.submitted-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-box--submitted {
+  align-items: center;
+}
+
+.text-box__heading {
+  color: var(--white);
+}
+
+.text-box__description {
+  font-size: 1.8rem;
+}
+
+.rating-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 50%;
+  background-color: #3b424b;
+  cursor: pointer;
+  transition: color, background-color 0.3s ease;
+}
+
+.rating--active {
+  color: var(--white);
+  background-color: var(--light-grey);
+}
+
+.rating:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.submitted-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  color: var(--primary-color);
+  background-color: #3b424b;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 1.8rem;
+  padding: 1.6rem;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  transition: color, background-color 0.3s ease;
+}
+
+.btn:hover {
+  color: var(--primary-color);
+  background-color: var(--white);
+}
+
+@media (max-width: 34em) {
+  .rating {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+
+  .card {
+    padding: 2.4rem;
+  }
 }
